@@ -4,10 +4,10 @@ import codecs
 import locale
 sys.stdout = codecs.getwriter(locale.getpreferredencoding())(sys.stdout)
 import codecs, sys, time, random
-
+#Не реализованная фича. Изначально планировалось предоставить пользователю ввести предпочитаемую скорость вывода текста самому.
 #set1 = raw_input(u'Введите желаемую скорость отображения текста >')
 
-def print_slow(str):
+def print_slow(str): #Функция, которая выводит текст с задержкой, по буквам.
     for letter in str.read():
         sys.stdout.write(letter)
         time.sleep(float(.01))
